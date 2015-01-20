@@ -7,8 +7,8 @@ for (i in 1:n)
 		{r1<-0}
 	else {r1<-cov(a.s,b.s)/(sd(a.s)*sd(b.s))}
 	r.boot<-c(r.boot,r1)}
-	r<-cov(a,b)/(sd(a)*sd(b))
-	m<-0
+r<-cov(a,b)/(sd(a)*sd(b))
+m<-0
 for (i in 1: n)
 	{if(r.boot[[i]]>r||r.boot[[i]]==r)
 		{m<-m+1}}
