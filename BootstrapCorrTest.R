@@ -13,7 +13,7 @@ m<-0
 for (i in 1: n)                 
 	{if(r.boot[[i]]>r||r.boot[[i]]==r)
 		{m<-m+1}}                 #this loop go thorugh r.boot and count the cases when a value is equal to or greater than r 
-		p<-m/n                    #p-value is the proportion of such cases out of total number of cases
+p<-m/n                            #p-value is the proportion of such cases out of total number of cases
 se.rboot<-sd(r.boot)/sqrt(n)      #calculate bootstrap sample error of correlation coefficient
 return(c(r, se.rboot, p))         #return 1) correlation coeffient of the data, 2)bootstrap sample error, 3)p-value
 }
